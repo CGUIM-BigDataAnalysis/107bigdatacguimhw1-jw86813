@@ -23,7 +23,6 @@ result$大職業別<-substr(result$大職業別,
                     start=1,stop=regexpr("業",result$大職業別))
 sort(table(result$大職業別),decreasing = T)
 
-
 salaryvs<-select(X103,"大職業別")%>%
   mutate(vs103=X103$`專科-女/男`,vs104=X104$`大學-女/男`,
          vs105=X105$`大學-女/男`,vs106=X106$`大學-女/男`,)
