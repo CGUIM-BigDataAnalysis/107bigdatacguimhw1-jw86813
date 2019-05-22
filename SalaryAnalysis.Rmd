@@ -36,6 +36,7 @@ knitr::kable(head(compare1$大職業別,10))
 ```
 
 利用filter可選出比例>1.05的資料，在用select選出職業別跟比例，用arrange按照比例大到小排序。
+
 ### 提高超過5%的的職業有哪些? 
 ```{r over5}
 result<-filter(compare1,薪資差異比例>=1.05)%>%
@@ -47,6 +48,7 @@ knitr::kable(result)
 ```
 
 用substr擷取字串，從第一個到第一個“業”字，即為該職業職業種別，在用table計算種別出現次數並依出現次數多到少排列。
+
 ### 主要的職業種別是哪些種類呢?
 ```{r mainType}
 result$大職業別<-substr(result$大職業別,
